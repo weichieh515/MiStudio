@@ -1,0 +1,8 @@
+.header {
+  padding: 0 !important;
+}
+
+.home-logo {
+  position: absolute;
+  z-index: 11;
+}

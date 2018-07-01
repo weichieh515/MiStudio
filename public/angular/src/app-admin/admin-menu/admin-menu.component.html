@@ -1,0 +1,81 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../admin/admin-menu">
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 後台管理首頁
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="http://www.mis.ccu.edu.tw:8080" *ngIf="authService.authenticated" target="blank">Jenkinse管家</a>
+      </li>
+
+      <li>
+        <a *ngIf="data.user && authService.authenticated"> {{data.user.name}}</a>
+      </li>
+      <li>
+        <a *ngIf="!authService.authenticated" (click)="authService.login()">登入</a>
+      </li>
+      <li>
+        <a (click)=authService.logout() *ngIf="authService.authenticated">登出</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="button-list row">
+  <div class="btn-group col-md-3">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <h4>編輯公告
+        <span class="caret"></span>
+      </h4>
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <a routerLink="/news-list/dept" routerLinkActive="active">系所公告</a>
+      </li>
+      <li>
+        <a routerLink="/news-list/speech" routerLinkActive="active">演講公告</a>
+      </li>
+      <li>
+        <a routerLink="/news-list/other" routerLinkActive="active">其他公告</a>
+      </li>
+      <li>
+        <a routerLink="/news-list/masterexam" routerLinkActive="active">碩士學位考試公告</a>
+      </li>
+      <li>
+        <a routerLink="/news-list/embaexam" routerLinkActive="active">碩專學位考試公告</a>
+      </li>
+      <li>
+        <a routerLink="/news-list/phdexam" routerLinkActive="active">博士學位考試公告</a>
+      </li>
+    </ul>
+  </div>
+  <div class="btn-group col-md-3 ">
+    <a routerLink="/recruitments" routerLinkActive="active">
+      <button type="button" class="btn btn-default btn-block">
+        <h4>編輯招生資訊</h4>
+      </button>
+    </a>
+  </div>
+  <div class="btn-group col-md-3">
+    <a routerLink="/members" routerLinkActive="active">
+      <button type="button" class="btn btn-default btn-block">
+        <h4>編輯系所成員</h4>
+      </button>
+    </a>
+  </div>
+  <div class="btn-group col-md-3 ">
+    <a routerLink="/documents" routerLinkActive="active">
+      <button type="button" class="btn btn-default btn-block">
+        <h4>編輯下載文件</h4>
+      </button>
+    </a>
+  </div>
+
+  <!--<div class="btn-group col-md-3">
+    <a routerLink="/maillist" routerLinkActive="active">
+      <button type="button" class="btn btn-default"><h4>寄信</h4></button>
+    </a>
+  </div>-->
+</div>

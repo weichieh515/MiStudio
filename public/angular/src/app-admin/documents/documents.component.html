@@ -1,0 +1,108 @@
+<div class="container">
+  <h2>文件下載</h2>
+  <!-- Nav tabs -->
+  <div class="card">
+    <ul class="nav nav-tabs">
+      <!--一般文件-->
+      <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#document">申請單<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#undergraduateDoc" data-toggle="tab">大學部</a></li>
+          <li><a href="#graduateDoc" data-toggle="tab">碩士班</a></li>
+          <li><a href="#doctorialDoc" data-toggle="tab">博士班</a></li>
+        </ul>
+      </li>
+      <!--考古題-->
+      <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">歷屆考古題<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#undergraduateExam" data-toggle="tab">大學部</a></li>
+          <li><a href="#graduateExam" data-toggle="tab">碩士班</a></li>
+          <li><a href="#doctorialExam" data-toggle="tab">博士班</a></li>
+        </ul>
+      </li>
+      <!--修業規定-->
+      <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#course">相關規範及修業規定<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#undergraduateCourse" data-toggle="tab">大學部</a></li>
+          <li><a href="#graduateCourse" data-toggle="tab">碩士班</a></li>
+          <li><a href="#gradsCourse" data-toggle="tab">碩專班</a></li>
+          <li><a href="#doctorialCourse" data-toggle="tab">博士班</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--內容-->
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!--一般文件內容-->
+      <div class="tab-pane fade in active " id="undergraduateDoc">
+        <p>申請單下載(大學部)
+          <app-button-add (click)="goAddPage('document','undergraduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="undergraduate_doc" [edit]=true [doctype]="type_document"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="graduateDoc">
+        <p>申請單下載(碩士班)
+          <app-button-add (click)="goAddPage('document','graduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="graduate_doc" [edit]=true [doctype]="type_document"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="doctorialDoc">
+        <p>申請單下載(博士班)
+          <app-button-add (click)="goAddPage('document','doctorial')"></app-button-add>
+        </p>
+        <app-document-list [documents]="doctorial_doc" [edit]=true [doctype]="type_document"></app-document-list>
+      </div>
+
+      <!--考古題內容-->
+      <div class="tab-pane fade " id="undergraduateExam">
+        <p>歷屆考古題下載(大學部)
+          <app-button-add (click)="goAddPage('exam','undergraduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="undergraduate_exam" [edit]=true [doctype]="type_exam"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="graduateExam">
+        <p>歷屆考古題下載(碩士班)
+          <app-button-add (click)="goAddPage('exam','graduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="graduate_exam" [edit]=true [doctype]="type_exam"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="doctorialExam">
+        <p>歷屆考古題下載(博士班)
+          <app-button-add (click)="goAddPage('exam','doctorial')"></app-button-add>
+        </p>
+        <app-document-list [documents]="doctorial_exam" [edit]=true [doctype]="type_exam"></app-document-list>
+      </div>
+
+      <!--修業規定內容-->
+      <div class="tab-pane fade " id="undergraduateCourse">
+        <p>相關規範及修業規定(大學部)
+          <app-button-add (click)="goAddPage('course','undergraduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="undergraduate_course" [edit]=true [doctype]="type_course"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="graduateCourse">
+        <p>相關規範及修業規定(碩士班)
+          <app-button-add (click)="goAddPage('course','graduate')"></app-button-add>
+        </p>
+        <app-document-list [documents]="graduate_course" [edit]=true [doctype]="type_course"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="gradsCourse">
+        <p>相關規範及修業規定(碩專班)
+          <app-button-add (click)="goAddPage('course','grads')"></app-button-add>
+        </p>
+        <app-document-list [documents]="grads_course" [edit]=true [doctype]="type_course"></app-document-list>
+      </div>
+      <div class="tab-pane fade" id="doctorialCourse">
+        <p>相關規範及修業規定(博士班)
+          <app-button-add (click)="goAddPage('course','doctorial')"></app-button-add>
+        </p>
+        <app-document-list [documents]="doctorial_course" [edit]=true [doctype]="type_course"></app-document-list>
+      </div>
+
+    </div>
+
+  </div>
+</div>

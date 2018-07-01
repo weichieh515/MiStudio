@@ -1,0 +1,13 @@
+<div class="list">
+  <div *ngFor="let document of documents" class="item">
+    <a [href]="'/doc/'+document.link" target="_blank">
+      {{document.title}}
+    </a>
+    <div class="rightBox">
+      <app-button-edit *ngIf="edit_doc" (click)="goEditPage('document',document._id)" class="doc_editbtn"></app-button-edit>
+      <app-button-edit *ngIf="edit_exam" (click)="goEditPage('exam',document._id)" class="doc_editbtn"></app-button-edit>
+      <app-button-edit *ngIf="edit_course" (click)="goEditPage('course',document._id)" class="doc_editbtn"></app-button-edit>
+      <span class="badge">{{document.time | date: 'mediumDate'}}</span>
+    </div>
+  </div>
+</div>

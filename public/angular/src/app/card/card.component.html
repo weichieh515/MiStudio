@@ -1,0 +1,44 @@
+<div class="card-container manual-flip">
+  <div class="card">
+    <!--卡片正面-->
+    <div class="front">
+      <div class="image">
+        <img [src]="member.imgUrl? '/img/member/'+member.imgUrl:'assets/img/logo.png'">
+      </div>
+      <div class="content">
+        <div class="header">{{member.name}}</div>
+        <div class="subtitle">{{member.title}}</div>
+        <div class="divider"></div>
+        <div class="center-align description autoBreak" [innerHTML]="member.experts">
+        </div>
+      </div>
+      <div class="attached bottom button" onclick="rotateCard(this)">更多資訊<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+    </div>
+    <!--卡片背面-->
+    <div class="back">
+      <div class="editBtnWrapper">
+        <app-button-edit *ngIf="edit" (click)="goEditPage(member._id)"></app-button-edit>
+      </div>
+      <div class="content">
+        <div class="header">{{member.name}}</div>
+        <div class="subtitle">{{member.title}}</div>
+        <div class="horizontal divider" *ngIf="type!='staff'">學歷</div>
+        <div class="center-align description">{{member.education}}
+        </div>
+        <div class="horizontal divider">研究領域</div>
+        <div class="center-align description autoBreak" [innerHTML]="member.experts">
+        </div>
+        <div class="horizontal divider">聯絡方式</div>
+        <div class="description">
+          <div><i class="marker icon"></i>辦公室：{{member.office}}</div>
+          <div><i class="call icon"></i>分機：{{member.exts}}</div>
+          <div><i class="mail icon"></i>E-mail：{{member.email}}</div>
+          <div *ngIf="member.page"><i class="browser icon"></i><a href="{{member.page}}" target="blank" >點擊前往個人頁面</a></div>
+        </div>
+
+
+      </div>
+      <div class="attached bottom button" onclick="rotateCard(this)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>返回</div>
+    </div>
+  </div>
+</div>

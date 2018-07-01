@@ -1,0 +1,64 @@
+<div class="container" *ngIf="member">
+  <div calss="row">
+    <div class="col-md-5">
+      <app-card [member]="member"></app-card>
+    </div>
+    <div class="col-md-5">
+      <div class="form-area">
+        <form role="form">
+          <br style="clear:both">
+          <div class="form-group">
+            <div class="form-group">
+              <label for="name">照片</label>
+              <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" (change)="uploader.uploadAll(); uploading = true"
+              /> {{uploaderError}}
+            </div>
+            <div class="row">
+              <div class="form-group" class="col-md-5">
+                <label for="name">姓名</label>
+                <input [(ngModel)]="member.name" type="text" name="name" class="form-control" required>
+              </div>
+              <div class="form-group" class="col-md-7">
+                <label for="title">職稱</label>
+                <input [(ngModel)]="member.title" type="text" name="title" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="experts">研究領域</label>
+            <textarea class="form-control" type="textarea" name="experts" [(ngModel)]="member.experts" maxlength="50" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="experts">學歷</label>
+            <input [(ngModel)]="member.education" type="text" name="education" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group" class="col-md-5">
+                <label for="experts">辦公室</label>
+                <input [(ngModel)]="member.office" type="text" name="office" class="form-control" required>
+              </div>
+              <div class="form-group" class="col-md-7">
+                <label for="experts">電話分機</label>
+                <input [(ngModel)]="member.exts" type="text" name="exts" class="form-control" required>
+              </div>              
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="experts">信箱</label>
+            <input [(ngModel)]="member.email" type="text" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="experts">個人頁面</label>
+            <input [(ngModel)]="member.page" type="text" name="page" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <button *ngIf="editMode" class="btn btn-danger btn-outline" [disabled]="uploading" (click)="deleteMember()">刪除</button>
+            <button *ngIf="editMode" class="btn btn-primary pull-right" [disabled]="uploading" (click)="updateMember()">儲存變更</button>
+            <button *ngIf="!editMode" class="btn btn-success btn-block" [disabled]="uploading" (click)="createMember()">新增</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

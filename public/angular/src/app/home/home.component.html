@@ -1,0 +1,108 @@
+<header>
+  <div class='blurred-container'>
+    <div class="img-src"></div>
+  </div>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <div id="homeHeading">
+        <app-icon-menu></app-icon-menu>
+      </div>
+      <div class="page-scroll-wrapper">
+        <a id="scrollBotton" href="#homeNews" class="page-scroll"><i class="angle down icon"></i></a>
+      </div>
+      <div class="marquee">
+        <a class="marquee-link" href="http://mis.csie.io">107學年度博士班招生開始囉!! 點我了解更多<i class="marquee-arrow-animation angle down icon"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="homeNews">
+  <div class="row">
+    <div class="col-xs-12 col-md-5 news-column news-title-block">
+      <div class="news-title">
+        最新消息
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-7 news-column">
+      <div class="col-xs-12 col-md-6 news-column">
+        <div class="col-xs-12 col-md-12 news-cell">
+          <app-news-list [type]="'dept'"></app-news-list>
+        </div>
+        <div class="col-xs-12 col-md-12 news-cell">
+          <div class="list-style-type">
+            <h3>學位考試公告</h3>
+            <ol>
+              <li>
+                <a routerLink="/news-list/masterexam">
+                  <h4 class="list-title">碩士班</h4>
+                </a>
+              </li>
+              <li>
+                <a routerLink="/news-list/embaexam">
+                  <h4 class="list-title">碩專班</h4>
+                </a>
+              </li>
+              <li>
+                <a routerLink="/news-list/phdexam">
+                  <h4 class="list-title">博士班</h4>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 news-column">
+        <div class="col-xs-12 col-md-12 news-cell">
+          <app-news-list [type]="'speech'"></app-news-list>
+        </div>
+        <div class="col-xs-12 col-md-12 news-cell">
+          <app-news-list [type]="'other'"></app-news-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section id="homeRecruit">
+  <div class="row">
+    <div class="col-xs-12 col-md-5 recruit-column recruit-title-block">
+      <div class="recruit-title">
+        <div class="academic">
+          <span class="year">105</span>
+          <span>學年度</span>
+        </div>
+        招生資訊
+      </div>
+      <div class="recruit-content">
+        招生簡章、考古題下載
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-7 recruit-column">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 recruit-column">
+          <a routerLink="/recruitments" routerLinkActive="active">
+            <div class="col-xs-12 col-md-12 recruit-cell">
+              <div class="recruit-subtitle">大學部</div>
+            </div>
+          </a>
+          <a routerLink="/recruitments" routerLinkActive="active">
+            <div class="col-xs-12 col-md-12 recruit-cell">
+              <div class="recruit-subtitle">碩士班</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-md-6 recruit-column">
+          <a routerLink="/recruitments" routerLinkActive="active">
+            <div class="col-xs-12 col-md-12 recruit-cell">
+              <div class="recruit-subtitle">碩專班</div>
+            </div>
+          </a>
+          <a routerLink="/recruitments" routerLinkActive="active">
+            <div class="col-xs-12 col-md-12 recruit-cell">
+              <div class="recruit-subtitle">博士班</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->

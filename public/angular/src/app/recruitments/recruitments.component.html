@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row recruit_listview">
+    <div class="col-xs-12 col-sm-12 col-lg-3">
+      <div class="title_big">
+        招生資訊
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a data-toggle="tab" href="#undergraduates">學士班</a></li>
+        <li><a data-toggle="tab" href="#graduates">碩士班</a></li>
+        <li><a data-toggle="tab" href="#grads">碩專班</a></li>
+        <li><a data-toggle="tab" href="#doctorals">博士班</a></li>
+        <li><a data-toggle="tab" href="#cents">學分班</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-lg-9">
+      <div class="tab-content">
+        <div id="undergraduates" class="tab-pane fade in active listview">
+          <app-recruit-content *ngIf="undergraduates"  id="undergraduates" [type]="'undergraduates'" [recruits]="undergraduates" [edit]=false></app-recruit-content>
+        </div>
+        <div id="graduates" class="tab-pane fade listview">
+          <app-recruit-content *ngIf="graduates" id="graduates" class="tab-pane fade" [type]="'graduates'" [recruits]="graduates" [edit]=false></app-recruit-content>
+        </div>
+        <div id="grads" class="tab-pane fade listview">
+          <app-recruit-content *ngIf="grads" id="grads" class="tab-pane fade" [type]="'grads'" [recruits]="grads" [edit]=false></app-recruit-content>
+        </div>
+        <div id="doctorals" class="tab-pane fade listview">
+          <app-recruit-content *ngIf="doctorials" id="doctorials" class="tab-pane fade" [type]="'doctorials'" [recruits]="doctorials" [edit]=false></app-recruit-content>
+        </div>
+        <div id="cents" class="tab-pane fade listview">
+          <app-recruit-content *ngIf="cents" id="cents" class="tab-pane fade" [type]="'cents'" [recruits]="cents" [edit]=false></app-recruit-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.row {
+  background-color: #eee;
+}
+
+.members_title_big {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  color: #554166;
+}
+
+.members_title {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: #554166;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}

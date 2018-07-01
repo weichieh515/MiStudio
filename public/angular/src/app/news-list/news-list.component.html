@@ -1,0 +1,22 @@
+<div class="list-style-type">
+  <h3>{{type|newsType}}</h3>
+  <ol *ngIf="!fullMode">
+    <li *ngFor="let news of newsList | slice:0:2;">
+      <div class="list-title">
+        <a routerLink="/news/{{news._id}}">{{news.title}}</a>
+      </div>
+      <div class="date">{{news.time | date: 'mediumDate'}}</div>
+    </li>
+    <a routerLink="/news-list/{{type}}" class="more pull-right">顯示更多</a>
+  </ol>
+
+  <ol *ngIf="fullMode" class="full_mode_list">
+    <li *ngFor="let news of newsList">
+      <div class="list-title">
+        <a routerLink="/news/{{news._id}}">{{news.title}}</a>
+      </div>
+      <div class="date">{{news.time | date: 'mediumDate'}}</div>
+    </li>
+  </ol>
+
+</div>

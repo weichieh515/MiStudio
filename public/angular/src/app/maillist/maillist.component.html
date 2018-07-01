@@ -1,0 +1,25 @@
+<div id="container">
+  <div id="maillist">
+    <label for="">寄信</label><br>
+    <label for="">To：</label>
+
+    <select id="class">
+      <option *ngFor="let maillist of maillist_s">{{maillist.class}}</option>
+    </select>
+
+    <br>
+  
+    <label for="subject">主旨：</label>
+    <input type="text" id="subject" size="100">
+
+    <br>
+
+    <label for="content">內容：</label>
+    <br>
+    <textarea name="" id="content" cols="100" rows="10"></textarea>
+    <br>
+
+    <input type="file" value="file[]">
+    <input type="button" value="送出">
+  </div>
+</div> 

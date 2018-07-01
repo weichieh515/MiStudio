@@ -1,0 +1,100 @@
+.news_listview {
+  min-height: 100vh;
+  background-color: #dff3f6;
+}
+.listview {
+  height: 100%;
+}
+.title_big {
+  margin-left: 1.5em;
+  margin-bottom: 30px;
+  padding: 100px 30px 20px 15px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.news_listview .title_big{
+  background-color: #95cdd7;
+  color: white;
+}
+.news_listview .col-lg-3 {
+  padding: 0;
+}
+.news_listview .col-lg-9 {
+  padding: 0 100px;
+}
+.nav-pills li {
+  margin-left: 8em;
+}
+.nav-pills>li:first-child>a, .nav-pills>li:last-child>a {
+  border-radius: 0;
+}
+.nav-pills>li>a {
+  font-size: 18px;
+  font-weight: bold;
+  width: 180px;
+  padding: 10px 15px 0 50px;
+  border: none;
+  margin-right: 0;
+  color: #c7b393;
+  transition: all .3s;
+  z-index: 0;
+}
+.nav-pills>li>a::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(0%, -50%, 0);
+  transition: transform .3s ease-in-out;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+  background-color: transparent;
+  font-size: 22px;
+  color: rgba(0, 0, 0, .5) !important;
+}
+.nav-pills li.active::before,
+.nav-pills>li>a:hover::before,
+.nav-pills>li>a:focus::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 23px;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(0%, -50%, 0);
+  transition: transform .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.nav-pills>li>a:focus, .nav-pills>li>a:hover {
+  background-color: transparent;
+}
+.news_listview .tab-pane {
+  min-height: 500px;
+  margin: 100px 0 0 0;
+}
+@media (max-width: 1199px) {
+  .news_listview {
+    min-height: auto;
+  }
+  .news_listview .col-lg-9 {
+    padding: 0 15px;
+  }
+  .news_listview .tab-pane {
+    min-height: auto;
+    margin: 0;
+  }
+  .title_big {
+    margin: 70px 0 0 0;
+    padding: 30px 20px;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+}

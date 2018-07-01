@@ -1,0 +1,14 @@
+.updated {
+  color: #a9a9a9;
+  font-weight: 300;
+  margin: 5px 0;
+}
+.panel-group {
+  margin: 23px 0;
+}
+.recruit {
+  display: flex;
+}
+.recruit .editBtnWrapper {
+  padding: 24px 16px;
+}

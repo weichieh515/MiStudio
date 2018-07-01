@@ -1,0 +1,22 @@
+.recruit {
+  background-color: white;
+  min-height: 100vh;
+}
+.recruit_date {
+  text-align: right;
+}
+.tab-content {
+  margin-top: 82px;
+}
+.rule-pane {
+  margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+  .tab-content {
+    margin-top: 15px;
+  }
+  .list-pane {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

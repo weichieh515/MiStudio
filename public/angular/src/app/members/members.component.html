@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <div class="members_title_big">專任師資</div>
+      <div class="cards">
+        <app-card [member]="member" [edit]=false *ngFor="let member of faculty"></app-card>
+      </div>
+      <div class="members_title_big">行政人員</div>
+      <div class="cards">
+        <app-card [member]="member" [edit]=false *ngFor="let member of staff"></app-card>
+      </div>
+    </div>
+  </div>
+</div>

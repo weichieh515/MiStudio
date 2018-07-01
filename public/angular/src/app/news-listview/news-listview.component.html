@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row news_listview">
+    <div class="col-xs-12 col-sm-12 col-lg-3">
+      <div class="title_big">
+        最新消息
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a data-toggle="tab" href="#dept">系所公告</a></li>
+        <li ><a data-toggle="tab" href="#speech">演講公告</a></li>
+        <li ><a data-toggle="tab" href="#other">其他公告</a></li>
+        <li ><a data-toggle="tab" href="#imexam">碩士學位考試公告</a></li>
+        <li ><a data-toggle="tab" href="#embaexam">碩專學位考試公告</a></li>
+        <li ><a data-toggle="tab" href="#phdexam">博士學位考試公告</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-lg-9">
+      <div class="tab-content">
+        <div id="dept" class="tab-pane fade in active listview">
+          <app-news-list [type]="'dept'"></app-news-list>
+        </div>
+        <div id="speech" class="tab-pane fade listview">
+          <app-news-list [type]="'speech'"></app-news-list>
+        </div>
+        <div id="other" class="tab-pane fade listview">
+          <app-news-list [type]="'other'"></app-news-list>
+        </div>
+        <div id="imexam" class="tab-pane fade listview">
+          <app-news-list [type]="'masterexam'"></app-news-list>
+        </div>
+        <div id="embaexam" class="tab-pane fade listview">
+          <app-news-list [type]="'embaexam'"></app-news-list>
+        </div>
+        <div id="phdexam" class="tab-pane fade listview">
+          <app-news-list [type]="'phdexam'"></app-news-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  <div class="container">
+    <h2><最新公告></h2>
+    <div class="row">
+<div class=" col-xs-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>類別</th>
+          <th>標題</th>
+          <th>時間</th>
+          <th>發文者</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let news of news">
+          <td>{{news.type}}</td>
+          <td>{{news.title}}</td>
+          <td>{{news.time}}</td>
+          <td>{{news.publisher}}</td>
+        </tr>
+        <tr>
+          <td>學術</td>
+          <td>106學年度碩士推薦甄試第二階段複試排程</td>
+          <td>2016-11-30</td>
+        </tr>
+
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-default">
+      More
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+  </div>
+  </div>
+</div>-->

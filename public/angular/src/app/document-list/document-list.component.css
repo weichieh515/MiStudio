@@ -1,0 +1,37 @@
+/*a{max-width: 600px}*/
+
+.list {
+  max-height: 485px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 95px 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.item > a {
+  color: #555;
+}
+
+.rightBox {
+  position: absolute;
+  right: 10px;
+}
+
+.badge {
+  background-color: #dad0d0;
+}
+
+@media (max-width: 767px) {
+  .list {
+    max-height: initial;
+  }
+}

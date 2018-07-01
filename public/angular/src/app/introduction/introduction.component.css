@@ -1,0 +1,280 @@
+section {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+}
+
+section h4 {
+  margin: 10px 0;
+}
+
+section p {
+  font-size: 15px;
+}
+
+section .row {
+  margin: 0;
+  height: 100%;
+}
+
+#Intro {
+  background-color: rgb(250, 238, 219);
+}
+
+#Research {
+  background-color: rgb(223, 243, 246);
+}
+
+#Member {
+  background-color: rgb(255, 237, 232);
+}
+
+
+#Location {
+  background-color: rgb(255, 237, 232);
+}
+
+#Intro .col-lg-3, #Research .col-lg-3, #Member .col-lg-3, #Location .col-lg-3 {
+  padding: 0;
+  height: 100%;
+}
+
+#Intro .col-lg-9, #Location .col-lg-9 {
+  padding-left: 25px;
+  padding-right: 80px;
+  height: 100%;
+}
+
+#Research .col-lg-9, #Member .col-lg-9 {
+  height: 100%;
+  padding-left: 25px;
+}
+
+.introduction_title_big {
+  padding: 100px 30px 20px 0;
+  text-align: right;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  color: #FFF;
+}
+
+#Intro .introduction_title_big, #Research .introduction_title_big,#Member .introduction_title_big, #Location .introduction_title_big {
+  margin-left: 1.5em;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 50px;
+  color: #666;
+}
+
+#Intro .introduction_title_big {
+  margin-bottom: 30px;
+  background-color: rgb(253, 197, 107);
+}
+
+#Research .introduction_title_big {
+  background-color: rgb(111, 196, 206);
+}
+
+#Member .introduction_title_big {
+  background-color: rgb(147, 119, 172);
+  color: #EEE;
+}
+
+
+#Location .introduction_title_big {
+  background-color: rgb(251, 153, 127);
+}
+
+.introduction_title {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+#Intro .introduction_title {
+  color: rgb(91, 69, 34);
+}
+
+#Research .introduction_title {
+  color: rgb(31, 77, 83);
+}
+
+#Member .introduction_title {
+  color: rgb(31, 77, 83);
+}
+
+
+#Location .introduction_title {
+  color: #F1CACA;
+}
+
+.introduction_content {
+  margin-top: 110px;
+  color: #4C4C4C;
+}
+
+#Member .introduction_content{
+  margin-top: 80px;
+}
+
+.research_slide {
+  padding-right: 40px;
+}
+
+.nav-pills li {
+  margin-left: 8em;
+}
+
+.nav-pills>li:first-child>a, .nav-pills>li:last-child>a {
+  border-radius: 0;
+}
+
+.nav-pills>li>a {
+  margin: auto;
+  margin-top: 10px;
+  margin-right: 0;
+  border: none;
+  padding: 0 15px 0 50px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  color: rgba(191, 191, 191, 1);
+  transition: all .3s;
+  z-index: 0;
+}
+
+.nav-pills>li>a:hover::after {
+  width: 100%;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 22px;
+  color: rgba(0, 0, 0, .6) !important;
+}
+
+.nav-pills>li>a:focus, .nav-pills>li>a:hover {
+  background-color: transparent;
+}
+
+.nav-pills li a:before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(0%, -50%, 0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav-pills li a:focus::before, .nav-pills li a:hover::before, .nav-pills li.active::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 23px;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate3d(0%, -50%, 0);
+  transition: transform .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+#Intro .tab-pane {
+  padding-bottom: 40px;
+}
+
+.member_card{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.member_card .card-container{
+  margin-right: 0 !important;
+}
+
+@media (max-width: 1310px) {
+  #introductionVision p {
+    font-size: 14px;
+  }
+  #introductionVision h4 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  section {
+    height: auto;
+    min-height: auto;
+  }
+  #Intro .tab-pane:last-child {
+    padding-bottom: 50px;
+  }
+  #Intro .col-lg-9, #Location .col-lg-9 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #Intro .introduction_title_big {
+    margin-bottom: 0px;
+  }
+  .introduction_content {
+    margin: 20px 0;
+  }
+  #Intro .introduction_content {
+    margin: 20px 0 0 0;
+  }
+  .introduction_title_big {
+    margin-top: 70px;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+  .introduction_title {
+    text-align: center;
+    width: 100%;
+  }
+  #Research .introduction_title {
+    font-size: 25px;
+  }
+  .research_slide {
+    padding: 0;
+  }
+}
+
+
+.row {
+  background-color: #eee;
+}
+
+.members_title_big {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "微軟正黑體";
+  color: #554166;
+}
+
+.members_title {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: #554166;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}

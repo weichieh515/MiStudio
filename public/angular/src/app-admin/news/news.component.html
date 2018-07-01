@@ -1,0 +1,4 @@
+<ckeditor [(ngModel)]="ckeditorContent" [config]="{filebrowserUploadUrl: wysiwygUrl+ '/img'}" (change)="onChange($event)"
+  (ready)="onReady($event)" (focus)="onFocus($event)" (blur)="onBlur($event)" debounce="500">
+  </ckeditor>
+{{ckeditorContent}}

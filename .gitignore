@@ -1,0 +1,10 @@
+/node_modules
+/public/doc
+/public/email
+/public/img
+/public/wysiwyg
+
+npm-debug.log
+
+
+package-lock.json

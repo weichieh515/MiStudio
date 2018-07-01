@@ -1,0 +1,125 @@
+body {
+  font-family: Microsoft JhengHei;
+}
+
+.footer {
+  background: #0c1a1e;
+  /*margin-top: 40px;*/
+  padding: 20px 0;
+}
+
+.widget h2 {
+  cursor: pointer;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.widget h3 {
+  color: #FFF;
+  font-size: 14px;
+  /*padding-bottom: 5px;*/
+}
+
+.widget_content {
+  list-style-type: none;
+  color: #FFF;
+  padding-left: 0px;
+  margin-left: 2px;
+  font-size: 12px;
+}
+
+.widget_content p {
+  font-size: 12px;
+  color: #FFF;
+  line-height: 20px;
+}
+
+.widget_content a {
+  color: #a0a3a4;
+  transition: color 0.2s linear 0s, background 0.2s linear 0s;
+}
+
+.widget_content {
+  margin-right: 10px;
+}
+
+.widget_content a:hover {
+  transition: color 0.2s linear 0s, background 0.2s linear 0s;
+  color: #ff670f;
+}
+
+.footer_bottom {
+  min-height: 40px;
+  background-color: #000000;
+  padding: 15px 0;
+  border-top: 1px solid #d9d9d9;
+  font-size: 11px;
+  color: #777;
+}
+
+.copyright p {
+  text-align: left;
+  color: #FFF;
+  padding: 10px 0;
+  margin-bottom: 0px;
+}
+
+.bottom_link {
+  color: #fff;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 7px 0;
+  text-align: right;
+}
+
+.bottom_link a {
+  color: #fff;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+
+.social_img {
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 479px) {
+  .widget_content {
+    display: none;
+  }
+  .active .widget_content {
+    display: inline;
+  }
+  .widget h2 {
+    border-bottom: 1px solid #ddd;
+  }
+  .widget h2:after {
+    content: "\203A";
+    color: white;
+    width: 20px;
+    height: 20px;
+    background: #999;
+    display: inline-block;
+    text-align: center;
+    float: right;
+  }
+  .active.widget h2:after {
+    content: "\2039";
+    background: #ccc;
+  }
+}

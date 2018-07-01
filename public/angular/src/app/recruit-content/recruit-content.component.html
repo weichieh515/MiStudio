@@ -1,0 +1,40 @@
+<div *ngIf="recruits.length>0">
+  <!--//-->
+  <div class="col-md-12 rule-pane recruit" *ngIf="recruits.length<=1">
+    <div align="left">
+      <h3>{{recruits[0].title}}</h3>
+      <div class="updated"><i class="calendar icon"></i>{{recruits[0].time | date: 'mediumDate'}}</div>
+      <p [innerHTML]="recruits[0].content | safe: 'html'"></p>
+    </div>
+    <div class="editBtnWrapper">
+      <app-button-edit *ngIf="edit" (click)="goEditPage(recruits[0]._id)"></app-button-edit>
+    </div>
+  </div>
+  <div class="panel-group" id="accordion" *ngIf="recruits.length>1">
+    <div class="panel panel-default" *ngFor="let recruit of recruits; let i = index">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#{{type}}_{{i}}">{{recruit.title}}</a>
+        </h4>
+      </div>
+      <div id="{{type}}_{{i}}" class="panel-collapse collapse">
+        <div class="panel-body recruit">
+          <div>
+            <div class="updated"><i class="calendar icon"></i>{{recruit.time | date: 'mediumDate'}}</div>
+            <div align="left" [innerHTML]="recruit.content | safe: 'html'">
+              <h3>{{recruits[0].title}}</h3>
+              <p [innerHTML]="recruit.content | safe: 'html'"></p>
+            </div>
+          </div>
+          <div class="editBtnWrapper">
+            <app-button-edit *ngIf="edit" (click)="goEditPage(recruit._id)"></app-button-edit>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//-->
+</div>
+<div *ngIf="recruits.length==0">
+  尚未建置...
+</div>

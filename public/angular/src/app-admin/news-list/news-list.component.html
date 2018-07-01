@@ -1,0 +1,25 @@
+
+<ol class="list-style-type">
+  <h3>{{type|newsType}}</h3>
+  <app-button-add (click)="goAddPage()"></app-button-add>
+  <li *ngFor="let news of newsList">
+    <div class="list-title">
+      <a routerLink="/news-edit/{{news._id}}">{{news.title}}</a>
+    </div>
+    <div class="date">{{news.time | date: 'mediumDate'}}</div>
+  </li>
+  <!--<li>
+    <div class="list-title">
+      <a href="#">賀!本系羅美玲老師榮獲美國夏威夷大學榮譽校友!</a>
+    </div>
+    <div class="date">Dec 9, 2016</div>
+  </li>
+  <li>
+    <div class="list-title">
+      <a href="#">
+        <學士班個人申請入學口試排程>
+      </a>
+    </div>
+    <div class="date">Dec 9, 2016</div>
+  </li>-->
+</ol>

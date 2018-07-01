@@ -1,0 +1,333 @@
+.center-align {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+
+/*card*/
+
+.card {
+  padding: 0 !important;
+  position: relative;
+}
+
+.card-container {
+  width: 300px !important;
+  min-height: 450px !important;
+  margin: 0 0 30px 0;
+}
+
+
+.cards>.card>.front,
+.cards>.card>.back,
+.front,
+.back {
+  max-width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 450.172px;
+  min-height: 450px;
+  background: #FFFFFF;
+  padding: 0em;
+  border: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 2px 3px 8px 0px rgba(180, 180, 180, 0.67);
+  -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+  z-index: '';
+  font-family: "微軟正黑體"
+}
+
+.cards>.card>.front,
+.cards>.card>.back {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.875em 0.5em;
+  float: none;
+}
+
+.cards:after,
+.front:after,
+.back:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.cards~.cards {
+  margin-top: 0.875em;
+}
+
+.cards>.card>.front> :first-child,
+.front> :first-child,
+.cards>.card>.back> :first-child,
+.back> :first-child {
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em !important;
+  border-top: none !important;
+}
+
+.cards>.card>.front> :last-child,
+.front> :last-child,
+.cards>.card>.back> :last-child,
+.back> :last-child {
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem !important;
+}
+
+.cards>.card>.front> :only-child,
+.front> :only-child,
+.cards>.card>.back> :only-child,
+.back> :only-child {
+  border-radius: 0.28571429rem !important;
+}
+
+.front>.image {
+  position: relative;
+  display: block;
+  height: 220px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0em;
+  background: #f5f2f2;
+}
+
+.front>.image>img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: inherit;
+}
+
+.front>.content,
+.back>.content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  background: none;
+  margin: 0em;
+  padding: 1em 1em;
+  box-shadow: none;
+  font-size: 1em;
+  border-radius: 0em;
+}
+
+.front>.content:after,
+.back>.content:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.cards>.card>.front>.content>.header,
+.front>.content>.header,
+.cards>.card>.back>.content>.header,
+.back>.content>.header {
+  display: block;
+  margin: '';
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.front>.content>.header,
+.back>.content>.header {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-top: 0.4em;
+  line-height: 1.2857em;
+  text-align: center;
+  color: #554166;
+}
+
+.front>.content>.subtitle,
+.back>.content>.subtitle {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+  line-height: 1.1757em;
+  text-align: center;
+  color: #83669d;
+}
+
+.front>.content>.footer,
+.back>.content>.footer {
+  font-size: 0.9em;
+  margin-top: 2.2em;
+  line-height: 1.1757em;
+}
+
+.front>.content>.header+.subtitle+.description,
+.back>.content>.header+.subtitle+.description {
+  margin-top: 0.5em;
+}
+
+.autoBreak {
+  word-break: keep-all;
+}
+
+
+/*buton*/
+
+.button {
+  background: #9377ac;
+  text-align: center;
+  color: #e0e0e0;
+  transition: background 0.5s;
+}
+
+.button:hover {
+  background: #9e83b6;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #846b9a;
+}
+
+.attached.button {
+  position: relative;
+  display: block;
+  margin: 0em;
+  padding: 0.65em 1em;
+  border-radius: 0em;
+  /*box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) !important;*/
+}
+
+.attached.bottom.button {
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+}
+
+
+/*divider*/
+
+.divider {
+  margin: 1rem 0rem;
+  line-height: 1;
+  height: 0em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.85);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.divider:not(.vertical):not(.horizontal) {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.horizontal.divider {
+  display: table;
+  white-space: nowrap;
+  height: auto;
+  margin: '';
+  line-height: 1;
+  text-align: center;
+}
+
+.horizontal.divider:before,
+.horizontal.divider:after {
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 50%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/divider.png);
+}
+
+.horizontal.divider:before {
+  background-position: right 1em top 50%;
+}
+
+.horizontal.divider:after {
+  background-position: left 1em top 50%;
+}
+
+.vertical.divider {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: 0rem;
+  padding: 0em;
+  width: auto;
+  height: 50%;
+  line-height: 0em;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.vertical.divider:before,
+.vertical.divider:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  z-index: 3;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  width: 0%;
+  height: calc(100% - 1rem);
+}
+
+.vertical.divider:before {
+  top: -100%;
+}
+
+.vertical.divider:after {
+  top: auto;
+  bottom: 0px;
+}
+
+
+/*icon*/
+
+.front .glyphicon,
+.back .glyphicon {
+  padding: 0 5px;
+}
+
+/*edit_btn*/
+.card .editBtnWrapper {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

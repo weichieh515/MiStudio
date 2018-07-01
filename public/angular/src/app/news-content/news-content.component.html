@@ -1,0 +1,66 @@
+<div class="wrapper" *ngIf="news">
+  <div class="mainWrapper">
+    <div class="col-xs-12 col-md-5 leftColumn">
+      <div class="newsTitle">
+        <h3>{{news.title}}</h3>
+      </div>
+      <ul class="ul">
+        <li *ngIf="news.updateTime" class="remark" >
+          <span class="remarkLabel">更新時間</span>
+          <span class="remarkValue">{{(news.updateTime | date: 'mediumDate') || '-'}}</span>
+        </li>
+        <li class="remark">
+          <span class="remarkLabel">公告時間</span>
+          <span class="remarkValue">{{news.time | date: 'mediumDate'}}</span>
+        </li>
+        <li class="remark">
+          <span class="remarkLabel">類別</span>
+          <span class="remarkValue">{{(news.subType || news.type) | newsType}}</span>
+        </li>
+        <li class="remark" ng-false="false">
+          <span class="remarkLabel">發文者</span>
+          <span class="remarkValue">{{news.publisher || '-'}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-7 rightColumn">
+      <div class="newsContent" [innerHTML]="news.content | safe: 'html'">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <table class="table row">
+  <thead>
+    <tr>
+      <th class="col-md-2"></th>
+      <th class="col-md-8"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>標題</td>
+      <td>{{news.title}}</td>
+    </tr>
+    <tr>
+      <td>類別</td>
+      <td>{{news.type | newsType}}</td>
+    </tr>
+    <tr>
+      <td>發文者</td>
+      <td>{{news.publisher}}</td>
+    </tr>
+    <tr>
+      <td>公告時間</td>
+      <td>{{news.time | date: 'mediumDate'}}</td>
+    </tr>
+      <tr>
+      <td>更新時間</td>
+      <td>{{news.updateTime | date: 'mediumDate'}}</td>
+    </tr>
+    <tr>
+      <td>內文</td>
+      <td [innerHTML]="news.content | safe: 'html'"></td>
+    </tr>
+  </tbody>
+</table> -->

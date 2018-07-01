@@ -1,0 +1,83 @@
+/*body {
+  font-family: "Helvetica", Arial, "微軟正黑體";
+}*/
+h2,h3 {
+  font-weight:lighter;
+}
+/*.container {
+  background-color: rgba(247, 247, 247, 0.93);
+}*/
+/*.block{
+  width: 25%;
+  float: left;
+}*/
+
+
+.list-style-type{
+  min-height: 294.31px;
+  padding: 0px 43px;
+}
+.list-style-type h2,h3{
+  font-family: '微軟正黑體';
+  text-align: center;
+  color: #000000 ;
+  padding: 5px 0 5px 0;
+  /*text-shadow: 1px 1px lightgrey;*/
+}
+.list-style-type li{
+  border-bottom:1px solid #dfdfdf;
+  list-style-type:none;
+  padding:8px;
+  position: relative;
+  min-height: 10vh;
+}
+.list-style-type li:last-child{
+  border-bottom: none;
+}
+.list-style-type .date{
+  color: #b7b7b7;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+/*.listview .list-style-type p{
+  color: red;
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-top: 6px;
+}*/
+.list-style-type a{
+  font-family: '微軟正黑體';
+  font-size:16px;
+  color: #2c4d5d;
+  -o-transition: color .20s ;
+  -webkit-transition: color .20s ;
+  -moz-transition: color .20s ;
+  transition: color .20s ;
+}
+.list-style-type a:hover{
+  color: #afafaf;
+  text-decoration: none;
+}
+.more{
+  padding: 8px;
+}
+
+@media only screen and (max-width: 990px){
+  .list-style-type{
+    min-height: auto;
+    margin: 5px;
+    padding-bottom: 9px;
+  }
+  .list-style-type li{
+    padding: 8px 8px 0px 8px;
+    min-height:auto;
+  }
+}
+@media only screen and (max-width: 676px){
+  .list-style-type{
+    padding: 0 15px;
+  }
+  .list-style-type li{
+    height:auto;
+  }
+}

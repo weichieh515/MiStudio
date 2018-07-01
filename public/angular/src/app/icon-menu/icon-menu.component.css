@@ -1,0 +1,186 @@
+.row{
+  margin: 0;
+}
+
+.icon_menu {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon_menu .header {
+  font-size: 30px;
+  text-decoration: none;
+  color: #FFF;
+}
+.icon_menu .icon_cell {
+  position: relative;
+  float: left;
+  margin: 0 18px;
+}
+.icon_menu img {
+  margin: auto !important;
+}
+
+.icon_menu .link {
+  /*background: #97bccc;
+  box-shadow: 3px 5px 5px rgba(145, 145, 145, 0.76);
+  border-radius: 50px;
+  -o-transition: background .30s ;
+  -webkit-transition: background .30s ;
+  -moz-transition: background .30s ;
+  transition: background .30s ;*/
+}
+.icon_menu .link:hover {
+  /*background: #6b98b9;*/
+
+}
+.icon_menu .link a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/*.icon_menu .link a:hover {
+  color: #d2ebe6;
+  -o-transition: color .30s linear;
+  -webkit-transition: color .30s linear;
+  -moz-transition: color .30s linear;
+  transition: color .30s linear;
+}*/
+
+
+.icon_menu .col-xs-6, .icon_menu .col-sm-3 {
+  padding-top: 10px;
+  color: #808080;
+}
+
+.icon_menu .link_icon {
+  width: 160px;
+  height: 160px;
+  padding: 37px 0 0 3px;
+  font-size: 60px;
+  text-align: center;
+
+  box-shadow: 3px 5px 5px rgba(145, 145, 145, 0.76);
+  border-radius: 99%;
+  -o-transition: background .30s ;
+  -webkit-transition: background .30s ;
+  -moz-transition: background .30s ;
+  transition: background .30s ;
+}
+.icon_menu .link_name {
+  width: 160px;
+  padding: 15px 0 0 3px;
+  font-size: 30px;
+  color: #808080;
+  text-align: center;
+  text-decoration: none;
+  font-family: "微軟正黑體";
+}
+#intro .link_icon {
+  background-color: #73c8dc;
+}
+#recruit .link_icon {
+  background-color: #f7aca6;
+}
+#document .link_icon {
+  background-color: #fbc173;
+}
+#other .link_icon {
+  background-color: #b5b5b5;
+}
+#intro:hover .link_icon {
+  background-color: #54bdd4;
+}
+#recruit:hover .link_icon {
+  background-color: #f37f77;
+}
+#document:hover .link_icon {
+  background-color: #f9aa43;
+}
+#other:hover .link_icon {
+  background-color: #9c9c9c;
+}
+
+@media (max-width: 768px){
+  .icon_menu {
+    margin: 41px 15px;
+  }
+  .icon_menu .icon_cell {
+    margin: 0 8px;
+  }
+}
+@media (max-width: 767px) {
+  .icon_menu {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    margin: 0px;
+  }
+  .icon_menu .icon_cells {
+    width: 100%;
+    height: 100%;
+  }
+  .icon_menu .col-xs-6, .icon_menu .col-md-3{
+    padding: 0;
+  }
+  .icon_menu .icon_cell{
+    width:50%;
+    height: 50%;
+    margin: 0;
+  }
+  .icon_menu .link {
+    height: 100%;
+  }
+  .icon_menu .link_icon {
+    width: auto;
+    height: auto;
+    padding: 20px 0 10px 0;
+    font-size: 40px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .icon_menu .link_name {
+    width: auto;
+    height: auto;
+    color: #fff;
+    padding: 10px 0 20px 0;
+    font-size: 20px;
+  }
+  #intro .link_icon,
+  #recruit .link_icon,
+  #document .link_icon,
+  #other .link_icon,
+  #intro:hover .link_icon,
+  #recruit:hover .link_icon,
+  #document:hover .link_icon,
+  #other:hover .link_icon {
+    background-color: transparent;
+  }
+  #intro{
+    background-color: #73c8dc;
+  }
+  #recruit{
+    background-color: #f7aca6;
+  }
+  #document{
+    background-color: #fbc173;
+  }
+  #other{
+    background-color: #b5b5b5;
+  }
+  #intro:hover{
+    background-color: #54bdd4;
+  }
+  #recruit:hover{
+    background-color: #f37f77;
+  }
+  #document:hover{
+    background-color: #f9aa43;
+  }
+  #other:hover{
+    background-color: #9c9c9c;
+  }
+}

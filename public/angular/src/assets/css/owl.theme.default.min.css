@@ -1,0 +1,94 @@
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent
+}
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  float: left;
+  background-color: rgb(111, 196, 206);
+  height: 0;
+  padding-top: 53px;
+  width: 53px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 0.5s;
+}
+
+#Member .owl-theme .owl-nav [class*=owl-] {
+  background-color: rgb(147, 119, 172);
+}
+
+.owl-prev {
+  background-image: url('../img/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 14px;
+  background-size: 16px 14px;
+}
+
+.owl-next {
+  margin-left: 20px;
+  background-image: url('../img/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 14px;
+  background-size: 16px 14px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background-color: rgb(81, 164, 173);
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Member .owl-theme .owl-nav [class*=owl-]:hover {
+  background-color: rgb(112, 87, 135);
+}
+
+.owl-theme .owl-nav .disabled {
+  opacity: .5;
+  cursor: default
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 10px
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791
+}
+
+@media (max-width: 1199px) {
+  .owl-theme .owl-nav {
+    display: flex;
+    justify-content: center;
+  }
+}

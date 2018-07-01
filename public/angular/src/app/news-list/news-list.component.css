@@ -1,0 +1,62 @@
+h2, h3 {
+  font-weight: lighter;
+}
+
+.list-style-type {
+  min-height: 294.31px;
+}
+.list-style-type h2, h3 {
+  font-family: '微軟正黑體';
+  text-align: center;
+  color: #000000;
+  text-shadow: 1px 1px lightgrey;
+}
+.list-style-type ol {
+  padding: 0 20px;
+}
+.list-style-type li {
+  position: relative;
+  border-bottom: 1px solid #dfdfdf;
+  list-style-type: none;
+  padding: 8px;
+  min-height: 10vh;
+}
+.list-style-type .date {
+  color: #cfc4c3;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.list-style-type a {
+  font-size: 16px;
+  color: rgba(0, 0, 0, .5);
+}
+.list-style-type a:hover {
+  color: #505050;
+  text-decoration: none;
+}
+.more {
+  padding: 8px;
+}
+.list-style-type .full_mode_list {
+  padding: 60px ;
+}
+@media only screen and (max-width: 990px) {
+  .list-style-type {
+    min-height: auto;
+    margin: 5px;
+    padding-bottom: 9px;
+  }
+  .list-style-type li {
+    padding: 5px 0;
+    min-height: auto;
+  }
+  .list-style-type .full_mode_list {
+    padding: 60px 15px ;
+  }
+}
+@media only screen and (max-width: 676px) {
+  .list-style-type li {
+    height: auto;
+  }
+}

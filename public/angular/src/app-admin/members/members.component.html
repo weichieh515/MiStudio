@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>系所成員</h2>
+  <hr>
+  <h3>專任教師 Faculty</h3>
+  <!-- <app-button-add (click)="goAddPage('faculty')"></app-button-add> -->
+  <div class="row">   
+   
+        <div class="cards col-md-11">
+            <app-card [member]="member" [edit]=true *ngFor="let member of faculty "></app-card>
+          </div>
+    <div class="col-md-1">
+        上下拖曳來排序
+      <ul class="list-group" dnd-sortable-container [sortableData]="faculty">
+        <li *ngFor="let item of faculty; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item.name}}</li>
+      </ul>
+      <button type="button" class="btn btn-success" (click)="updateOrder(faculty)">確認</button>
+    </div>
+    
+  </div>
+  
+  <hr>
+  <h3>教職員 Staff</h3>
+  <app-button-add (click)="goAddPage('staff')"></app-button-add>
+
+  <div class="row">   
+      
+           <div class="cards col-md-11">
+  <div class="cards">
+    <app-card [member]="member" [edit]=true *ngFor="let member of staff"></app-card>
+  </div>
+</div>
+  <div class="col-md-1">
+    上下拖曳以排序
+      <ul class="list-group" dnd-sortable-container [sortableData]="staff">
+        <li *ngFor="let item of staff; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item.name}}</li>
+      </ul>
+      <button type="button" class="btn btn-success" (click)="updateOrder(staff)">確認</button>
+    </div>
+
+
+  
+</div>

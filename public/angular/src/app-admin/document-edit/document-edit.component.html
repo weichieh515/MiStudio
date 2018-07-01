@@ -1,0 +1,46 @@
+<div class="container col-xs-12 col-md-8 col-md-offset-2">
+  <div class="row">
+
+    <div class="tab-content rule-pane" *ngIf="document">
+      <div class="form-group">
+        <label for="title">檔案名稱</label>
+        <input [(ngModel)]="document.title" type="text" name="title" class="form-control" required>
+        <label for="title">檔案連結(上傳)</label>
+        <div *ngIf="doctype=='document'">
+          <input type="file" class="form-control" name="doc" ng2FileSelect [uploader]="documentuploader" (change)="documentuploader.uploadAll(); uploading = true"
+          /> {{uploaderError}}
+        </div>
+        <div *ngIf="doctype=='exam'">
+          <input type="file" class="form-control" name="doc" ng2FileSelect [uploader]="examuploader" (change)="examuploader.uploadAll(); uploading = true"
+          /> {{uploaderError}}
+        </div>
+        <div *ngIf="doctype=='course'">
+          <input type="file" class="form-control" name="doc" ng2FileSelect [uploader]="courseuploader" (change)="courseuploader.uploadAll(); uploading = true"
+          /> {{uploaderError}}
+        </div>
+      </div>
+      -
+      <p *ngIf="uploading">上傳中...</p>
+
+      <div *ngIf="doctype=='document'">
+        <button *ngIf="editMode" class="btn btn-danger btn-outline" [disabled]="uploading" (click)="deleteDocument('document')">刪除</button>
+        <button *ngIf="editMode" class="btn btn-primary pull-right" [disabled]="uploading" (click)="updateDocument('document')">儲存變更</button>
+        <button *ngIf="!editMode" class="btn btn-success btn-block" [disabled]="uploading" (click)="createDocument('document')">新增</button>
+      </div>
+      <div *ngIf="doctype=='exam'">
+        <button *ngIf="editMode" class="btn btn-danger btn-outline" [disabled]="uploading" (click)="deleteDocument('exam')">刪除</button>
+        <button *ngIf="editMode" class="btn btn-primary pull-right" [disabled]="uploading" (click)="updateDocument('exam')">儲存變更</button>
+        <button *ngIf="!editMode" class="btn btn-success btn-block" [disabled]="uploading" (click)="createDocument('exam')">新增</button>
+      </div>
+      <div *ngIf="doctype=='course'">
+        <button *ngIf="editMode" class="btn btn-danger btn-outline" [disabled]="uploading" (click)="deleteDocument('course')">刪除</button>
+        <button *ngIf="editMode" class="btn btn-primary pull-right" [disabled]="uploading" (click)="updateDocument('course')">儲存變更</button>
+        <button *ngIf="!editMode" class="btn btn-success btn-block" [disabled]="uploading" (click)="createDocument('course')">新增</button>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
